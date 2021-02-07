@@ -34,34 +34,33 @@ void bubbleSort(int array[], int length)
 void insertionSort(int array[], int length)
 {
 	int i, key, j;
-    for (i = 1; i < length; i++) 
+    	for (i = 1; i < length; i++) 
 	{ 
-        key = array[i]; 
-        j = i - 1; 
-        while (j >= 0 && array[j] > key) 
+        	key = array[i]; 
+        	j = i - 1; 
+        	while (j >= 0 && array[j] > key) 
 		{ 
-            array[j + 1] = array[j]; 
-            j = j - 1; 
+            	array[j + 1] = array[j]; 
+            	j = j - 1; 
         } 
-        array[j + 1] = key;
-        printf("\n - "); writeArray(array, length);
-    } 
+        	array[j + 1] = key;
+        	printf("\n - "); writeArray(array, length);
+	} 
 }
 
 void selectionSort(int array[], int length)
 {
 	int i, j, minIndex; 
-    
-    for (i = 0; i < length-1; i++) 
-    { 
-        minIndex = i; 
-        for (j = i+1; j < length; j++) 
-          if (array[j] < array[minIndex]) 
-            minIndex = j; 
-  
-        swap(&array[minIndex], &array[i]);
-        printf("\n - "); writeArray(array, length);
-    } 
+    	for (i = 0; i < length-1; i++) 
+    	{ 
+        	minIndex = i; 
+        	for (j = i+1; j < length; j++) 
+          		if (array[j] < array[minIndex]) 
+            			minIndex = j; 
+ 
+        	swap(&array[minIndex], &array[i]);
+        	printf("\n - "); writeArray(array, length);
+    	} 
 }
 
 int main()
